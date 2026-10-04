@@ -40,34 +40,11 @@ mosaic-no-train/   mosaic attacks without training (prompt-based decomposition)
 We train the attacker and defender with a GRPO-style policy-gradient procedure [Shao et al., 2024] adapted to multi-turn interaction. For each malicious seed, the models generate a group of $G$ complete conversations.
 A judge assigns a terminal verdict and per-turn harmful-progress scores, from which we construct role-specific rewards. Using the standard clipped policy-ratio objective, the per-role loss is
 
-$$
-\begin{aligned}
-J(\theta)
-&=
-\mathbb{E}\Bigg[
-\frac{1}{|G|}
-\sum_{i=1}^{|G|}
-\frac{1}{|o_i|}
-\sum_{t=1}^{|o_i|}
-\Bigg[
-\min\left(
-r_{i,t}(\theta)\hat{A}_i,\,
-\operatorname{clip}\left(
-r_{i,t}(\theta),1-\epsilon,1+\epsilon
-\right)\hat{A}_i
-\right)
-\\
-&\qquad
--
-\beta\,\mathrm{KL}\left(
-\pi_{\mathrm{A/D}}
-\middle\|
-\pi_{\mathrm{backbone}}
-\right)
-\Bigg]
-\Bigg]
-\end{aligned}
-$$
+<p align="center">
+  <img src="assets/grpo.png"
+       alt="GRPO policy-gradient objective"
+       width="800">
+</p>
 
 where $r_{i,t}(\theta)$ is the policy ratio, $\hat{A}_i$ is the advantage assigned to the corresponding generated segment, and $\beta$ controls anchoring to the frozen backbone. Our procedure differs from standard GRPO primarily in trajectory selection and in the construction of rewards and advantages.
 
