@@ -1,10 +1,10 @@
 # Mosaic Attacks
 
 <div align="left" style="line-height: 1;">
-  <a href="https://arxiv.org/pdf/2605.08427" target="_blank">
+  <a href="https://arxiv.org/pdf/XXX.XXX" target="_blank">
     <img alt="arXiv" src="https://img.shields.io/badge/arXiv-2506.24119-b31b1b?logo=arxiv&logoColor=white"/>
   </a>
-  <a href="https://huggingface.co/EmanueleLaMalfa/AnchoredBipolicySelf-Play/tree/main" target="_blank"><img alt="Hugging Face"
+  <a href="https://huggingface.co/EmanueleLaMalfa/MosaicAttacks" target="_blank"><img alt="Hugging Face"
     src="https://img.shields.io/badge/🤗%20Hugging%20Face-Model%20Checkpoints-fcd022?color=fcd022&logoColor=white"/></a>
 </div>
 
@@ -72,13 +72,13 @@ Only the re-writings that pass a strict control (i.e., 3 independent evaluations
 ## Cite our Paper
 Please use this bibtex handle to cite our work:
 ```
-@misc{lamalfa2026attackermirrorbreakingselfconsistency,
-      title={The Attacker in the Mirror: Breaking Self-Consistency in Safety via Anchored Bipolicy Self-Play}, 
-      author={Gabriele La Malfa and Emanuele La Malfa and Saar Cohen and Jie M. Zhang and Michael Luck and Michael Wooldridge and Elizabeth Black},
+@misc{lamalfa2026fragments,
+      title={Reflections and Fragments: Securing LLMs Against Sequential Mosaic Attacks}, 
+      author={Emanuele La Malfa and Saar Cohen and Gabriele La Malfa and Mickel Liu and Natasha Jaques and Michael Wooldridge},
       year={2026},
-      eprint={2605.08427},
+      eprint={XXX.XXX},
       archivePrefix={arXiv},
       primaryClass={cs.AI},
-      url={https://arxiv.org/abs/2605.08427}, 
+      url={https://arxiv.org/abs/XXX.XXX}, 
 }
 ```
