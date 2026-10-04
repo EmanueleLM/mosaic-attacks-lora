@@ -8,7 +8,7 @@
     src="https://img.shields.io/badge/🤗%20Hugging%20Face-Model%20Checkpoints-fcd022?color=fcd022&logoColor=white"/></a>
 </div>
 
-This repository contains the instructions to replicate the experiments of the paper "Reflections and Fragments: Securing LLMs Against Sequential Mosaic Attacks", as well as the results of our evaluation.
+This repository contains the instructions to replicate the experiments of the paper "Reflections and Fragments: Securing LLMs Against Sequential Mosaic Attacks" (**NeurIPS 2026 Oral**), as well as the results of our evaluation.
 
 Mosaic attacks split a malicious prompt into a sequence of sub-prompts. Each sub-prompt is benign on its own; together they recover the original harmful intent.
 
