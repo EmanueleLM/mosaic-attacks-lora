@@ -1,0 +1,16 @@
+benchmark,topic,n_prompts,base_jailbroken,base_asr,defender_jailbroken,defender_asr,abs_reduction_pp
+AdvBench,Weapons & Explosives,47,8,0.170,2,0.043,12.8
+AdvBench,Cyber & Hacking,145,35,0.241,10,0.069,17.2
+AdvBench,Fraud & Scams,91,21,0.231,9,0.099,13.2
+AdvBench,Drugs & Substances,17,1,0.059,3,0.176,-11.8
+AdvBench,Hate & Harassment,45,6,0.133,2,0.044,8.9
+AdvBench,Misinformation & Manipulation,50,15,0.300,7,0.140,16.0
+AdvBench,Privacy & Surveillance,29,6,0.207,4,0.138,6.9
+AdvBench,Other,96,16,0.167,7,0.073,9.4
+WildJailbreak,Cyber & Hacking,28,7,0.250,5,0.179,7.1
+WildJailbreak,Fraud & Scams,32,5,0.156,3,0.094,6.2
+WildJailbreak,Drugs & Substances,18,7,0.389,1,0.056,33.3
+WildJailbreak,Hate & Harassment,148,33,0.223,20,0.135,8.8
+WildJailbreak,Misinformation & Manipulation,98,19,0.194,8,0.082,11.2
+WildJailbreak,Privacy & Surveillance,78,3,0.038,1,0.013,2.6
+WildJailbreak,Other,118,11,0.093,3,0.025,6.8

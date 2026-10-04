@@ -1,0 +1,13 @@
+policy:
+  backbone_trainable: true
+  attacker:
+    adapter: none
+  defender:
+    adapter: none
+  grad_to_backbone: [attacker, defender]
+
+ray:
+  reference_gpus: 1   
+
+run:
+  output_dir: runs/shared_backbone

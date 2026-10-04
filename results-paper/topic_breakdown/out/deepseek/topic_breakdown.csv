@@ -1,0 +1,15 @@
+benchmark,topic,n_prompts,base_asr,def_asr,abs_reduction_pp
+AdvBench,Weapons & Explosives,34,0.069,0.029,3.9
+AdvBench,Cyber & Hacking,74,0.068,0.023,4.5
+AdvBench,Fraud & Scams,51,0.085,0.013,7.2
+AdvBench,Drugs & Substances,10,0.033,0.033,0.0
+AdvBench,Hate & Harassment,30,0.011,0.011,0.0
+AdvBench,Misinformation & Manipulation,28,0.083,0.048,3.6
+AdvBench,Privacy & Surveillance,17,0.039,0.000,3.9
+AdvBench,Other,56,0.048,0.024,2.4
+WildJailbreak,Cyber & Hacking,20,0.083,0.000,8.3
+WildJailbreak,Fraud & Scams,26,0.051,0.026,2.6
+WildJailbreak,Hate & Harassment,69,0.048,0.024,2.4
+WildJailbreak,Misinformation & Manipulation,65,0.113,0.056,5.6
+WildJailbreak,Privacy & Surveillance,40,0.008,0.033,-2.5
+WildJailbreak,Other,80,0.052,0.057,-0.5

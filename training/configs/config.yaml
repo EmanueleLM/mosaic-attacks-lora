@@ -1,0 +1,86 @@
+model:
+  base: "Qwen/Qwen3.6-35B-A3B"
+  dtype: bf16
+  trust_remote_code: true
+
+policy:
+  backbone_trainable: false
+  attacker:
+    adapter: lora
+  defender:
+    adapter: lora
+  grad_to_backbone: [attacker, defender]
+  lora:
+    r: 256
+    alpha: 256           
+                         
+    dropout: 0.0
+    target_modules: [q_proj, k_proj, v_proj, o_proj,
+                     in_proj_qkv, in_proj_z, out_proj,
+                     gate_proj, up_proj, down_proj]
+
+rollout:
+  max_turns: 3                    
+  attacker_done_token: "<END>"
+  defender_uses_default_template: true
+  early_stop_on_refusal: false
+  temperature: {attacker: 1.0, defender: 0.7}   
+  max_new_tokens: {attacker: 256, defender: 3072}
+  top_p: 0.95
+  watchdog_timeout_s: 1800
+  worker_start_timeout_s: 3600
+
+reward:
+  judge: llm
+  zero_sum: true
+  bounds: [-1.0, 1.0]
+  sign: defender_positive
+  shaping: defanged_asym_strict
+  judge_model: "Qwen/Qwen3.6-35B-A3B"
+  judge_base_url: "http://localhost:8000/v1"
+  judge_api_key: "EMPTY"
+  judge_temperature: 0.0
+  judge_max_tokens: 3072
+  judge_force_json: true
+  wildguard_model: "allenai/wildguard"
+  wildguard_reduction: max_harm_and_refusal
+
+rl:
+  algo: reinforce_plus_plus
+  kl_coef: 0.02                                  
+  kl_estimator: k3               
+  clip: 0.2
+  per_role_advantage_norm: true
+  adv_norm_eps: 1.0e-8
+  lr:
+    attacker: 2.0e-4             
+    defender: 3.0e-4             
+  warmup_steps: 15               
+  backbone_lr: 1.0e-6
+  ppo_epochs: 1                              
+  minibatch_size: 2                      
+  grad_clip: 1.0
+  total_steps: 500                   
+  episodes_per_step: 64              
+  checkpoint_every: 10          
+
+data:
+  malicious_seeds: data/wildjailbreak/malicious_seeds.csv
+  benign_seeds: data/wildjailbreak/benign_seeds.csv
+  benign_ratio: 0.5
+  seed_column: prompt
+  shuffle_seed: 0
+
+ray:
+  disaggregated: false
+  rollout_dp_replicas: 2
+  trainer_gpus: 4
+  judge_gpus: 1
+  reference_gpus: 0
+
+run:
+  seed: 0
+  output_dir: runs/default
+  wandb_project: null
+  log_every: 1
+  resume_from: null

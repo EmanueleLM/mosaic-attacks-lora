@@ -1,0 +1,15 @@
+policy:
+  backbone_trainable: false
+  attacker:
+    adapter: lora
+  defender:
+    adapter: lora
+
+rl:
+  minibatch_size: 2
+
+ray:
+  reference_gpus: 0   
+
+run:
+  output_dir: runs/bipolicy_lora
