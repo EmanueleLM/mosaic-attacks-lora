@@ -72,13 +72,13 @@ Only the re-writings that pass a strict control (i.e., 3 independent evaluations
 ## Cite our Paper
 Please use this bibtex handle to cite our work:
 ```
-@misc{lamalfa2026fragments,
+@misc{lamalfa2026reflectionsfragmentssecuringllms,
       title={Reflections and Fragments: Securing LLMs Against Sequential Mosaic Attacks}, 
-      author={Emanuele La Malfa and Saar Cohen and Gabriele La Malfa and Mickel Liu and Natasha Jaques and Michael Wooldridge},
+      author={Emanuele La Malfa and Saar Cohen and Gabriele La Malfa and Mickel Liu and Christian Schroeder de Witt and Natasha Jaques and Michael J. Wooldridge},
       year={2026},
-      eprint={XXX.XXX},
+      eprint={2610.05346},
       archivePrefix={arXiv},
-      primaryClass={cs.AI},
-      url={https://arxiv.org/abs/XXX.XXX}, 
+      primaryClass={cs.LG},
+      url={https://arxiv.org/abs/2610.05346}, 
 }
 ```
