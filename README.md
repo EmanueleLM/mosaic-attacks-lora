@@ -1,7 +1,7 @@
 # Mosaic Attacks
 
 <div align="left" style="line-height: 1;">
-  <a href="https://arxiv.org/pdf/XXX.XXX" target="_blank">
+  <a href="https://arxiv.org/pdf/2610.05346" target="_blank">
     <img alt="arXiv" src="https://img.shields.io/badge/arXiv-2506.24119-b31b1b?logo=arxiv&logoColor=white"/>
   </a>
   <a href="https://huggingface.co/EmanueleLaMalfa/MosaicAttacks" target="_blank"><img alt="Hugging Face"
