@@ -46,7 +46,7 @@ A judge assigns a terminal verdict and per-turn harmful-progress scores, from wh
        width="800">
 </p>
 
-where $r_{i,t}(\theta)$ is the policy ratio, $\hat{A}_i$ is the advantage assigned to the corresponding generated segment, and $\beta$ controls anchoring to the frozen backbone. Our procedure differs from standard GRPO primarily in trajectory selection and in the construction of rewards and advantages.
+where $r_{i,t}(\theta)$ is the policy ratio, $\hat{A}_i$ is the advantage assigned to the corresponding generated segment, and $\beta$ controls anchoring to the frozen backbone. Our procedure differs from standard GRPO primarily in trajectory selection and in the construction of rewards and advantages. Our approach collects the groups $G$, scores and ranks them in ascending rewards wrt the attacker (so, descending for the defender). Then, of the $|G|$ sorted sample, we retain only the top-$k$ (e.g., $k=3$) attacker and defender conversations, and use them to update our LoRA modules.
 
 We trained our models on a slurm cluser, feel free to send us an email if you need the python files to replicate the experiments.
 We will soon upload a fully compatible bare-metal version of the code.
